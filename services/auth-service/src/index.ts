@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { createServer } from "node:http";
 import { createApp } from "./app";
 import { logger } from "@/utils/logger";
@@ -9,7 +10,6 @@ const main = async () => {
     const server = createServer(app);
 
     const port = env.AUTH_SERVICE_PORT;
-
     server.listen(port, () => {
       logger.info({ port }, "Auth service is running");
     });

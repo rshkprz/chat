@@ -1,6 +1,6 @@
 import "dotenv/config";
 
-import { createEnv, z} from "@chat/common";
+import { createEnv, z } from "@chat/common";
 
 const envSchema = z.object({
   NODE_ENV: z
